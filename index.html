@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flirting dengan Pacar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        overflow: hidden; /* Prevents scrolling */
+      }
+      h1 {
+        color: #333;
+      }
+      .buttons {
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      button#yes {
+        background-color: #4caf50;
+        color: white;
+      }
+      button#yes:hover {
+        background-color: #45a049;
+      }
+      button#no {
+        background-color: #f44336;
+        color: white;
+        position: absolute;
+      }
+      button#no:hover {
+        background-color: #e53935;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ecungg suka aq gaa</h1>
+    <div class="buttons">
+      <button id="yes">YESSSSSS</button>
+      <button id="no">ENGGAA!!</button>
+    </div>
+
+    <script>
+      document.getElementById("yes").addEventListener("click", function () {
+        window.location.href = "cung.html";
+      });
+
+      document.getElementById("no").addEventListener("mouseover", function () {
+        const button = this;
+        const x = Math.floor(
+          Math.random() * (window.innerWidth - button.clientWidth)
+        );
+        const y = Math.floor(
+          Math.random() * (window.innerHeight - button.clientHeight)
+        );
+        button.style.left = `${x}px`;
+        button.style.top = `${y}px`;
+      });
+
+      document.getElementById("no").addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
